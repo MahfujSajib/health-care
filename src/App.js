@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
+import NotFound from './NotFound/NotFound';
+
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact></Contact>
+        </Route>
+        <Route exact path="*">
+          <NotFound></NotFound>
         </Route>
       </Switch>
       <Footer></Footer>
