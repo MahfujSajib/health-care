@@ -1,19 +1,20 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
-    const { name, img, description } = props.service;
+    const { id, name, img, description } = props.service;
     return (
-
-
         <div className="service-container">
             <img src={img} className="card-img-top" alt="..." />
             <h1 className="p-4">name: {name}</h1>
             <p className="p-4">{description}</p>
-            <Button className="w-50 m-5">See Services</Button>
-
+            <Link to={`/ourservices/${id}`}>
+                <Button className="w-50 m-5">See Full Services</Button>
+            </Link>
         </div>
+
 
 
 
